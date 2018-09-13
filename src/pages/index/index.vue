@@ -13,6 +13,7 @@
       </dd>
     </dl>
     <scroll-view scroll-y style="height: calc(100vh - 50px);" scroll-top="0">
+    <!--<scroll-view scroll-y scroll-top="0">-->
       <!--轮播图-->
       <div class="ub-box ub-ver z-bg-color-fff">
         <swiper class="swiper" indicator-dots="false" autoplay="false" interval="5000" duration="500">
@@ -94,14 +95,21 @@
       async initAjax() {
         let ret = await this.$ajax({url: 'https://devapi.ynshuke.com/v1/banners'})
         console.log(ret)
-      }
+      },
+
     },
     mounted() {
       // this.initAjax()
     },
+    onShow() {
+      // wx.navigateTo({url: '../goodDetail/main'})
+    },
     onPullDownRefresh() {
-      console.log('onPullDownRefresh');
-      setTimeout(() => {wx.stopPullDownRefresh()}, 600)
+      console.log('onPullDownRefresh=====');
+      setTimeout(() => {wx.stopPullDownRefresh()}, 400)
+    },
+    onReachBottom() {
+      console.log('onReachBottom=====');
     }
   }
 </script>
@@ -111,7 +119,7 @@
   .swiper{height: 120px;width: calc(100% - 16px)}
   .icon-item{width:20%;padding: 10px 13px 0 13px;box-sizing: border-box;}
   .icon{width: 38px;height: 38px;border-radius: 50%;color: #fff;font-size: 24px}
-  .adv{border-right: 2px solid #eee}
+  .adv{margin-top: 10px;border-right: 2px solid #eee}
   .adv img{width: 50px;height: 50px}
   .good{border-bottom: 1px solid #DDD8CE}
   .good img{width: 80px;height: 80px}

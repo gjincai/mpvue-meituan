@@ -23,6 +23,7 @@ export default {
   config: {
     // 页面前带有 ^ 符号的，会被编译成首页，其他页面可以选填，我们会自动把 webpack entry 里面的入口页面加进去
     pages: [
+      // '^pages/index/main',
       '^pages/index/main',
       'pages/orderList/main',
       'pages/self/main',
@@ -37,9 +38,10 @@ export default {
     window: {
       backgroundTextStyle: 'light',
       navigationBarBackgroundColor: '#fff',
-      navigationBarTitleText: '高仿美团',
+      navigationBarTitleText: '测试demo',
       navigationBarTextStyle: 'black',
-      // enablePullDownRefresh: true
+      enablePullDownRefresh: true,
+      onreachbottomdistance: 50
     },
     tabBar: {
       borderStyle: 'white',
@@ -62,6 +64,6 @@ export default {
         iconPath: 'static/images/tab3.png',
         text: "我的"
       }]
-    }
+    },
   }
 }

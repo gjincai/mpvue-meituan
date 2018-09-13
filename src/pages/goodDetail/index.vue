@@ -3,7 +3,7 @@
 	<scroll-view scroll-y style="height: 100vh" scroll-top="0">
 	  <dl class="ub-box ub-col">
 		<dd class="z-width-100-percent z-box-sizing-border z-bg-color-fff">
-			<image @click.stop="previewImage([indexImg])" class="z-width-100-percent z-img-cover indexImg" :src="indexImg">
+			<image @click.stop="previewImage([indexImg,indexImg])" class="z-width-100-percent z-img-cover indexImg" :src="indexImg">
 				<div class="indexImg-bk ub-box ub-col">
 					<span class="z-font-size-18 z-lineHeight-30 z-color-fff z-box-sizing-border z-padding-h-8-px">{{mainTitle}}</span>
 					<span class="z-font-size-14 z-color-fff z-box-sizing-border z-padding-h-8-px">{{subTitle}}</span>
@@ -199,8 +199,7 @@
 						imgs: [
 							'http://p0.meituan.net/400.0/shaitu/bc52b03f7f091d6711b8a1ec024a0e6a83730.jpg',
 							'http://p0.meituan.net/400.0/shaitu/053247a6b8ede53824435f23196971d2124167.jpg',
-							'http://p0.meituan.net/400.0/shaitu/0783b3f70ab47607593dcba906c7d570147806.jpg',
-
+							'http://p0.meituan.net/400.0/shaitu/0783b3f70ab47607593dcba906c7d570147806.jpg'
 						]
 					},
 				],
@@ -224,8 +223,8 @@
 		    },
 		},
 		onShow() {
-    		wx.setNavigationBarTitle({title: this.mainTitle})
-  		}
+      wx.setNavigationBarTitle({title: this.mainTitle})
+    }
 	}
 </script>
 <style scoped>

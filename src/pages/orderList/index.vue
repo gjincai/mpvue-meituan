@@ -31,7 +31,19 @@
     },
     methods: {},
     onShow () {
-      wx.setNavigationBarTitle({title: '订单列表'})
+      wx.setNavigationBarTitle({title: '订单列表222'})
+      wx.getLocation({
+        type: 'gcj02', //返回可以用于wx.openLocation的经纬度
+        success (res) {
+          const latitude = res.latitude
+          const longitude = res.longitude
+          // wx.openLocation({
+          //   latitude,
+          //   longitude,
+          //   scale: 28
+          // })
+        }
+      })
     }
   }
 </script>
